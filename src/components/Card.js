@@ -6,12 +6,37 @@ import Alertify from "../features/alertify_sample.png";
 
 function CardBody() {
     return (
-        <div className="py-12 bg-white">
+        <div className="py-12 bg-teal-100">
             <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="lg:text-center">
                     <h3 className="leading-8 font-extrabold text-gray-900 sm:text-3xl sm:leading-10 lg:text-center">
                         About Me
                     </h3>
+                    <p className="mt-4 max-w-4xl text-lg leading-7 text-gray-500 lg:mx-auto">
+                        Hello World! My name is Mark Kelly, I am currently
+                        enrolled @ the
+                        <a href="https://bootcamp.uoregon.edu/">
+                            University of Oregon{" "}
+                        </a>{" "}
+                        to become a Full Stack Developer. I have always enjoyed
+                        technology, it is a favorite pastime of mine. My goals
+                        are to use this certification towards a job that plays a
+                        role in advancement of technology and innovation. I.E,{" "}
+                        <em>working at Tesla (my dream job).</em>
+                    </p>
+                    <p className="mt-4 max-w-4xl text-lg leading-7 text-gray-500 lg:mx-auto">
+                        As for other hobbies, anything that has to do with
+                        sports <b>"especially football"</b> is enjoyable.
+                        Fantasy Football is basically a tradition, every
+                        football season; I have my designated leagues that I
+                        partake in. When I have time, video games is always a go
+                        to. My favorite games include{" "}
+                        <i>
+                            "Call of Duty", "OverWatch", "RainbowSix", "Halo",
+                            "Madden", "Forza", and "Apex Legends".
+                        </i>
+                    </p>
+
                     <p className="mt-4 max-w-4xl text-lg leading-7 text-gray-500 lg:mx-auto">
                         My professional activities include working for United
                         Natural Foods Inc in Ridgefield, WA as a reach lift
@@ -38,7 +63,42 @@ function CardBody() {
                         have any questions please contact me via Contact form.
                     </p>
                 </div>
-
+                <div className="mt-8 ">
+                    <h2 className="leading-8 font-extrabold text-gray-900 sm:text-xl sm:leading-10 lg:text-center">
+                        <i class="fas fa-medal"></i>
+                        <strong> Accomplishments (USAF)</strong>
+                    </h2>
+                    <br />
+                    <ul className="mt-4 max-w-4xl text-lg leading-7 text-gray-500 lg:mx-auto list-disc">
+                        <li>
+                            <p className="mt-4 max-w-4xl text-lg leading-7 text-gray-500 lg:mx-auto">
+                                Top Secret Clearance - USAF, 2009 I received my
+                                Top Secret Clearance in the United States Air
+                                Force on this date. It's a qualification for the
+                                career I was currently in.
+                            </p>
+                        </li>
+                        <br />
+                        <li>
+                            <p className="mt-4 max-w-4xl text-lg leading-7 text-gray-500 lg:mx-auto">
+                                Iraqi Campaign Medal/GWOTEM - USAF, 2010 After
+                                my deployment in Iraq, I was rewarded with the
+                                Iraqi Campaign Medal in Honor of my service
+                                along with the Global War on Terrorism
+                                Expeditionary Medal.
+                            </p>
+                        </li>
+                        <br />
+                        <li>
+                            <p className="mt-4 max-w-4xl text-lg leading-7 text-gray-500 lg:mx-auto">
+                                Expert Marksman - USAF, 2010 While in the Air
+                                Force I received a bronze star on my Expert
+                                Marksman ribbon to show that I am a qualified on
+                                both the M16 and M9.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
                 <div className="mt-10">
                     <h3 className="leading-8 font-extrabold text-gray-900 sm:text-3xl sm:leading-10 lg:text-center">
                         My Portfolio
@@ -48,7 +108,7 @@ function CardBody() {
                         <li>
                             <div className="flex">
                                 <div className="flex-shrink-0">
-                                    <div className="flex items-center justify-center h-48 w-40 rounded-lg bg-teal-500 overflow-hidden">
+                                    <div className="flex items-center justify-center h-48 w-48 rounded-lg bg-teal-500 overflow-hidden">
                                         <a href="https://alertifyproject.herokuapp.com/">
                                             <img
                                                 className="h-40 w-full object-cover"
@@ -83,7 +143,7 @@ function CardBody() {
                         <li className="mt-10 md:mt-0">
                             <div className="flex">
                                 <div className="flex-shrink-0">
-                                    <div className="flex items-center justify-center h-48 w-40 rounded-lg bg-teal-500 overflow-hidden">
+                                    <div className="flex items-center justify-center h-48 w-48 rounded-lg bg-teal-500 overflow-hidden">
                                         <img
                                             className="h-48 w-full object-cover"
                                             src={Birthday}
@@ -117,7 +177,7 @@ function CardBody() {
                         <li className="mt-10 md:mt-0">
                             <div className="flex">
                                 <div className="flex-shrink-0">
-                                    <div className="flex items-center justify-center h-48 w-40 rounded-lg bg-teal-500 overflow-hidden">
+                                    <div className="flex items-center justify-center h-48 w-48 rounded-lg bg-teal-500 overflow-hidden">
                                         <a href="https://burgerl0gger.herokuapp.com/burgers">
                                             <img
                                                 className="h-48 w-full object-cover"
@@ -159,7 +219,7 @@ function CardBody() {
                         <li className="mt-10 md:mt-0">
                             <div className="flex">
                                 <div className="flex-shrink-0">
-                                    <div className="flex items-center justify-center h-48 w-40 rounded-lg bg-teal-500 overflow-hidden">
+                                    <div className="flex items-center justify-center h-48 w-48 rounded-lg bg-teal-500 overflow-hidden">
                                         <a href="https://notekeeping00.herokuapp.com/">
                                             <img
                                                 className="h-32 w-full object-cover"

@@ -10,7 +10,7 @@ function Header() {
 
     return (
         <Router>
-        <div className="relative bg-white">
+        <div className="relative bg-teal-100">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
                     <div className="lg:w-0 lg:flex-1">
@@ -126,7 +126,7 @@ function Header() {
 
                     <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
                         <span className="inline-flex rounded-md shadow-sm">
-                            <a href="#" className="bg-teal-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                            <a href="#" className="bg-teal-500 hover:bg-teal-300 text-white font-bold py-2 px-4 rounded">
                                 <Link to="/contact">Contact Me</Link>
                             </a>
                             
