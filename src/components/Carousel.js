@@ -4,7 +4,7 @@ import './index.css';
 
 function Carousels() {
     return (
-        <div className="flex content-start flex-wrap bg-teal-200 h-48">
+        <div className="flex mx-auto p-1 content-start flex-wrap bg-gray-400 h-52 border-t-2 border-b-2 border-gray-500">
             <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <Carousel>
   <Carousel.Item>

@@ -10,29 +10,20 @@ function Header() {
 
     return (
         <Router>
-        <div className="relative bg-teal-100">
+        <div className="relative bg-gray-100">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
                     <div className="lg:w-0 lg:flex-1">
-                        <a href="#" className="flex">
+                        <a href="https://markkelly.dev" className="flex">
                             <img src={Logo} alt="MK-Logo"
                             />
                         </a>
                     </div>
                     
                     <nav className="hidden md:flex space-x-10">
-                        <a
-                            href="/"
-                            className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
-                        >
-                            <Link to="/">About</Link>
-                        </a>
-                        <a
-                            href="#"
-                            className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
-                        >
-                            <Link to="/portfolio">Portfolio</Link>
-                        </a>
+                        <Link className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150" to="/">About</Link>
+                        
+                        <Link className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150" to="/portfolio">Portfolio</Link>
 
                         <div className="relative">
                             <button
@@ -126,10 +117,7 @@ function Header() {
 
                     <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
                         <span className="inline-flex rounded-md shadow-sm">
-                            <a href="#" className="bg-teal-500 hover:bg-teal-300 text-white font-bold py-2 px-4 rounded">
-                                <Link to="/contact">Contact Me</Link>
-                            </a>
-                            
+                            <Link className="bg-teal-500 hover:bg-teal-300 text-white font-bold py-2 px-4 rounded" to="/contact">Contact Me</Link>
                         </span>
                     </div>
                 </div>

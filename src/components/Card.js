@@ -6,7 +6,7 @@ import Alertify from "../features/alertify_sample.png";
 
 function CardBody() {
     return (
-        <div className="py-12 bg-teal-100">
+        <div className="py-12 bg-gray-200">
             <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="lg:text-center">
                     <h3 className="leading-8 font-extrabold text-gray-900 sm:text-3xl sm:leading-10 lg:text-center">
@@ -63,7 +63,7 @@ function CardBody() {
                         have any questions please contact me via Contact form.
                     </p>
                 </div>
-                <div className="mt-8 ">
+                <div className="mt-8 p-8 border-t-4 border-b-4 border-gray-400">
                     <h2 className="leading-8 font-extrabold text-gray-900 sm:text-xl sm:leading-10 lg:text-center">
                         <i class="fas fa-medal"></i>
                         <strong> Accomplishments (USAF)</strong>
@@ -125,10 +125,10 @@ function CardBody() {
                                     </h4>
                                     <p className="mt-2 text-base leading-6 text-gray-500">
                                         Alertify is intended to make an impact
-                                        on a more secure/safe future. I designed
-                                        this with three other classmates while
-                                        at the University of Oregon. Click the
-                                        image to route to site.
+                                        on a more secure/safe future. It was designed
+                                        by myself and three other classmates while
+                                        at the University of Oregon. Alertify is great for emergency situations
+                                        to send your specific contacts an SOS text with current location. <i>Click the image to route to site.</i>
                                     </p>
                                     <br />
                                     <hr />
@@ -144,25 +144,23 @@ function CardBody() {
                             <div className="flex">
                                 <div className="flex-shrink-0">
                                     <div className="flex items-center justify-center h-48 w-48 rounded-lg bg-teal-500 overflow-hidden">
+                                        <a href="https://keithbillings.github.io/About-Your-Birthday/">
                                         <img
                                             className="h-48 w-full object-cover"
                                             src={Birthday}
                                         />
+                                        </a>
                                     </div>
                                 </div>
                                 <div className="ml-4">
                                     <h4 className="text-lg leading-6 font-medium text-gray-900">
-                                        Birthday API
+                                        <a href="https://keithbillings.github.io/About-Your-Birthday/">Birthday API</a>
                                     </h4>
                                     <p className="mt-2 text-base leading-6 text-gray-500">
-                                        Since this was our first team
-                                        assignment, and our first self directed
-                                        project, our team quickly decided that
-                                        the project must be something fun and
-                                        entertaining. It didn't take much time
-                                        to focus on a topic that everyone could
-                                        relate to; Birthdays! Click the image to
-                                        route to site.
+                                        Birthday API allows users to find fun facts about their birthday.
+                                        It's very simple and modular. Just enter your DD/MM/YYYY and let the app
+                                        do the work, generating your horoscope, top movie of your birth year, which celebrities you share a birthday with and more. <i>Click the image to
+                                        route to site.</i>
                                     </p>
                                     <br />
                                     <hr />
@@ -195,16 +193,9 @@ function CardBody() {
                                     <p className="mt-2 text-base leading-6 text-gray-500">
                                         Eat-Da-Burger! An app that lets users
                                         input the names of burgers that they
-                                        like to eat. Whenever a user submits a
-                                        burger name, it will display on the left
-                                        side of the page, waiting to be
-                                        devoured. Each burger in the waiting
-                                        area also has a Devour it! button. When
-                                        the user clicks it, the burger will move
-                                        to the right side of the page. Every
-                                        burger is stored in a database, whether
-                                        devoured or not. Click the image to
-                                        route to site.
+                                        like to eat. Every burger is stored in a
+                                        database, whether devoured or not. <i>Click the image to
+                                        route to site.</i>
                                     </p>
                                     <br />
                                     <hr />
@@ -239,7 +230,8 @@ function CardBody() {
                                         write, save, and delete notes. This
                                         application uses an express backend to
                                         save and retrieve note data from a JSON
-                                        file. Click the image to route to site.
+                                        file. <i>Click the image to
+                                        route to site.</i>
                                     </p>
                                     <br />
                                     <hr />

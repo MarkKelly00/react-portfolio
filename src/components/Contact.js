@@ -62,7 +62,7 @@ class ContactForm extends React.Component {
 
     render () {
       return (
-        <div className="py-12 bg-teal-500">
+        <div className="py-12 mx-auto bg-gray-500 border-t-8 border-b-8 border-gray-400">
             <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="lg:text-center">
                     <h3 className="leading-8 font-extrabold text-gray-900 sm:text-3xl sm:leading-10 lg:text-center">
@@ -72,7 +72,7 @@ class ContactForm extends React.Component {
                 <br />
                 <Form onSubmit={this.handleSubmit}>
                   <Form.Group>
-                    <Form.Label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="full-name">Full Name</Form.Label>
+                    <Form.Label htmlFor="full-name">Full Name</Form.Label>
                     <Form.Control id="full-name" name="name" type="text" value={this.state.name} onChange={this.handleChange} />
                   </Form.Group>
 
@@ -86,7 +86,7 @@ class ContactForm extends React.Component {
                     <Form.Control id="message" name="message" as="textarea" rows="3" value={this.state.message} onChange={this.handleChange} />
                   </Form.Group>
 
-                  <Button className="d-inline-block" variant="primary" type="submit" disabled={this.state.disabled}>
+                  <Button className="bg-teal-500 hover:bg-teal-300 text-white font-bold py-2 px-4 rounded" variant="primary" type="submit" disabled={this.state.disabled}>
                     Send
                   </Button>
 
