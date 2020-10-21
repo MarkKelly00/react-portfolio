@@ -1,15 +1,15 @@
 import React from "react";
-import Notes from "../features/note_keeper.png";
+import CodeLocker from "../features/codelocker.png";
 import Birthday from "../features/birthdayAPI.PNG";
 import Burger from "../features/burgerApp.png";
 import Alertify from "../features/alertify_sample.png";
 
 function CardBody() {
     return (
-        <div className="py-12 bg-gray-200">
+        <div className="py-6 bg-gray-200">
             <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="lg:text-center">
-                    <h3 className="leading-8 font-extrabold text-gray-900 sm:text-3xl sm:leading-10 lg:text-center">
+                    <h3 id="about" className="leading-8 font-extrabold text-gray-900 sm:text-3xl sm:leading-10 lg:text-center">
                         About Me
                     </h3>
                     <p className="mt-4 max-w-4xl text-lg leading-7 text-gray-500 lg:mx-auto">
@@ -65,7 +65,7 @@ function CardBody() {
                 </div>
                 <div className="mt-8 p-8 border-t-4 border-b-4 border-gray-400">
                     <h2 className="leading-8 font-extrabold text-gray-900 sm:text-xl sm:leading-10 lg:text-center">
-                        <i class="fas fa-medal"></i>
+                        <i className="fas fa-medal" />
                         <strong> Accomplishments (USAF)</strong>
                     </h2>
                     <br />
@@ -100,7 +100,7 @@ function CardBody() {
                     </ul>
                 </div>
                 <div className="mt-10">
-                    <h3 className="leading-8 font-extrabold text-gray-900 sm:text-3xl sm:leading-10 lg:text-center">
+                    <h3 id="portfolio" className="leading-8 font-extrabold text-gray-900 sm:text-3xl sm:leading-10 lg:text-center">
                         My Portfolio
                     </h3>
                     <br />
@@ -112,7 +112,7 @@ function CardBody() {
                                         <a href="https://alertifyproject.herokuapp.com/">
                                             <img
                                                 className="h-40 w-full object-cover"
-                                                src={Alertify}
+                                                src={Alertify} alt="Alertify"
                                             />
                                         </a>
                                     </div>
@@ -147,7 +147,7 @@ function CardBody() {
                                         <a href="https://keithbillings.github.io/About-Your-Birthday/">
                                         <img
                                             className="h-48 w-full object-cover"
-                                            src={Birthday}
+                                            src={Birthday} alt="Birthday App"
                                         />
                                         </a>
                                     </div>
@@ -176,10 +176,43 @@ function CardBody() {
                             <div className="flex">
                                 <div className="flex-shrink-0">
                                     <div className="flex items-center justify-center h-48 w-48 rounded-lg bg-teal-500 overflow-hidden">
+                                        <a href="https://notekeeping00.herokuapp.com/">
+                                            <img
+                                                className="h-48 w-full object-cover"
+                                                src={CodeLocker} alt="Note Taker"
+                                            />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className="ml-4">
+                                    <h4 className="text-lg leading-6 font-medium text-gray-900">
+                                        <a href="https://codel0cker.herokuapp.com/">
+                                            CodeLocker
+                                        </a>
+                                    </h4>
+                                    <p className="mt-2 text-base leading-6 text-gray-500">
+                                        An application that can be used to
+                                        execute, save, and delete Code in your own CodeLocker. We used a MERN stack for our technologies; including Auth0 and AceEditor. <i>Click the image to
+                                        route to site.</i>
+                                    </p>
+                                    <br />
+                                    <hr />
+                                    <p>
+                                        <a href="https://github.com/MarkKelly00/codeLocker">
+                                            Click Here For GitHub Repo
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li className="mt-10 md:mt-0">
+                            <div className="flex">
+                                <div className="flex-shrink-0">
+                                    <div className="flex items-center justify-center h-48 w-48 rounded-lg bg-teal-500 overflow-hidden">
                                         <a href="https://burgerl0gger.herokuapp.com/burgers">
                                             <img
                                                 className="h-48 w-full object-cover"
-                                                src={Burger}
+                                                src={Burger} alt="Burger App"
                                             />
                                         </a>
                                     </div>
@@ -201,42 +234,6 @@ function CardBody() {
                                     <hr />
                                     <p>
                                         <a href="https://github.com/MarkKelly00/burger">
-                                            Click Here For GitHub Repo
-                                        </a>
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li className="mt-10 md:mt-0">
-                            <div className="flex">
-                                <div className="flex-shrink-0">
-                                    <div className="flex items-center justify-center h-48 w-48 rounded-lg bg-teal-500 overflow-hidden">
-                                        <a href="https://notekeeping00.herokuapp.com/">
-                                            <img
-                                                className="h-32 w-full object-cover"
-                                                src={Notes}
-                                            />
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="ml-4">
-                                    <h4 className="text-lg leading-6 font-medium text-gray-900">
-                                        <a href="https://notekeeping00.herokuapp.com/">
-                                            Note Taker
-                                        </a>
-                                    </h4>
-                                    <p className="mt-2 text-base leading-6 text-gray-500">
-                                        An application that can be used to
-                                        write, save, and delete notes. This
-                                        application uses an express backend to
-                                        save and retrieve note data from a JSON
-                                        file. <i>Click the image to
-                                        route to site.</i>
-                                    </p>
-                                    <br />
-                                    <hr />
-                                    <p>
-                                        <a href="https://github.com/MarkKelly00/noteKeeper">
                                             Click Here For GitHub Repo
                                         </a>
                                     </p>

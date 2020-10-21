@@ -65,7 +65,7 @@ class ContactForm extends React.Component {
         <div className="py-12 mx-auto bg-gray-500 border-t-8 border-b-8 border-gray-400">
             <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="lg:text-center">
-                    <h3 className="leading-8 font-extrabold text-gray-900 sm:text-3xl sm:leading-10 lg:text-center">
+                    <h3 id="contact" className="leading-8 font-extrabold text-gray-900 sm:text-3xl sm:leading-10 lg:text-center">
                         Contact Me
                     </h3>
                 </div>

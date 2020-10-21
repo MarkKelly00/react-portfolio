@@ -10,41 +10,29 @@ function Header() {
 
     return (
         <Router>
-        <div className="relative bg-gray-100">
+        <div className="relative p-2 bg-gray-400 h-52 border-t-2 border-b-2 border-gray-500 shadow-lg">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
-                <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
-                    <div className="lg:w-0 lg:flex-1">
-                        <a href="https://markkelly.dev" className="flex">
-                            <img src={Logo} alt="MK-Logo"
+                <div className="flex justify-between items-center border-gray-100 py-6 md:justify-start md:space-x-10">
+                    <div className="lg:w-full lg:flex-1">
+                            <img href="https://markkelly.dev" src={Logo} alt="MK-Logo"
                             />
-                        </a>
                     </div>
                     
                     <nav className="hidden md:flex space-x-10">
-                        <Link className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150" to="/">About</Link>
+                        <a className="text-base leading-6 font-medium text-white hover:text-gray-600" href="#about">About</a>
                         
-                        <Link className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150" to="/portfolio">Portfolio</Link>
+                        <a className="text-base leading-6 font-medium text-white hover:text-gray-600" href="#portfolio">Portfolio</a>
 
                         <div className="relative">
                             <button
                                 type="button"
-                                className="text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+                                className="text-white inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-600"
                                 onClick={() => {
                                     setIsOpen(!isOpen);
                                 }}
                             >
-                                <span>More</span>
-                                <svg
-                                    className="text-gray-400 h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150"
-                                    viewBox="0 0 20 20"
-                                    fill="currentColor"
-                                >
-                                    <path
-                                        fillRule="evenodd"
-                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                        clipRule="evenodd"
-                                    />
-                                </svg>
+                                <span>More </span>
+                                <i className="fas fa-caret-down" />
                             </button>
 
                             <Transition
@@ -66,9 +54,9 @@ function Header() {
                                                 <div className="z-20 relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                                                     <a
                                                         href="https://markkelly00.github.io/about/assets/Resume.pdf"
-                                                        className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150" target="_blank"
+                                                        className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150" target="_blank" rel="noreferrer"
                                                     >
-                                                        <img width="36" src="https://www.flaticon.com/svg/static/icons/svg/58/58600.svg" />
+                                                        <img width="36" src="https://www.flaticon.com/svg/static/icons/svg/58/58600.svg" alt="resume"/>
                                                         <div className="space-y-1">
                                                             <p className="text-base leading-6 font-medium text-gray-900">
                                                                 My Resume
@@ -80,9 +68,9 @@ function Header() {
                                                     </a>
                                                     <a
                                                         href="https://github.com/MarkKelly00"
-                                                        className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150" target="_blank"
+                                                        className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150" target="_blank" rel="noreferrer"
                                                     >
-                                                        <img width="32" src="https://seeklogo.com/images/G/github-logo-7880D80B8D-seeklogo.com.png" />
+                                                        <img width="32" src="https://seeklogo.com/images/G/github-logo-7880D80B8D-seeklogo.com.png" alt="GitHub"/>
                                                         <div className="space-y-1">
                                                             <p className="text-base leading-6 font-medium text-gray-900">
                                                                 GitHub
@@ -94,9 +82,9 @@ function Header() {
                                                     </a>
                                                     <a
                                                         href="https://www.linkedin.com/in/mark-kelly-9a1436160/"
-                                                        className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150" target="_blank"
+                                                        className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150" target="_blank" rel="noreferrer"
                                                     >
-                                                        <img width="32" src="https://seeklogo.com/images/L/linkedin-icon-logo-05B2880899-seeklogo.com.png" />
+                                                        <img width="32" src="https://seeklogo.com/images/L/linkedin-icon-logo-05B2880899-seeklogo.com.png" alt="LinkedIn" />
                                                         <div className="space-y-1">
                                                             <p className="text-base leading-6 font-medium text-gray-900">
                                                                 LinkedIn
@@ -117,7 +105,7 @@ function Header() {
 
                     <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
                         <span className="inline-flex rounded-md shadow-sm">
-                            <Link className="bg-teal-500 hover:bg-teal-300 text-white font-bold py-2 px-4 rounded" to="/contact">Contact Me</Link>
+                            <a className="bg-teal-500 hover:bg-teal-300 text-white font-bold py-2 px-4 rounded" href="#contact">Contact Me</a>
                         </span>
                     </div>
                 </div>
