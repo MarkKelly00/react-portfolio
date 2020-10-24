@@ -1,8 +1,9 @@
 import React from "react";
-import Carousels from './components/Carousel';
-import Header from "./components/Header";
-import CardBody from "./components/Card";
-import ContactForm from "./components/Contact";
+import Carousels from './components/Carousel/Carousel';
+import Header from "./components/Header/Header";
+import CardBody from "./components/Card/Card";
+import ContactForm from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
     <Carousels />
     <CardBody />
     <ContactForm />
+    <Footer />
     </div>
     );
 }

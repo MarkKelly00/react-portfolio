@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Transition } from "@tailwindui/react";
-import Logo from "../features/MyLogo.png";
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import Logo from "../../features/MyLogo.png";
+import Resume from "../../features/Resume.pdf";
+import { BrowserRouter as Router} from 'react-router-dom';
 
 
 function Header() {
@@ -10,7 +11,7 @@ function Header() {
 
     return (
         <Router>
-        <div className="relative p-2 bg-gray-400 h-52 border-t-2 border-b-2 border-gray-500 shadow-lg">
+        <div className="relative p-2 bg-gray-800 h-52 border-t-2 border-b-2 border-blue-800 shadow-lg">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 <div className="flex justify-between items-center border-gray-100 py-6 md:justify-start md:space-x-10">
                     <div className="lg:w-full lg:flex-1">
@@ -53,7 +54,7 @@ function Header() {
                                             <div className="rounded-lg shadow-xs overflow-hidden">
                                                 <div className="z-20 relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                                                     <a
-                                                        href="https://markkelly00.github.io/about/assets/Resume.pdf"
+                                                        href={Resume}
                                                         className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150" target="_blank" rel="noreferrer"
                                                     >
                                                         <img width="36" src="https://www.flaticon.com/svg/static/icons/svg/58/58600.svg" alt="resume"/>
@@ -105,7 +106,7 @@ function Header() {
 
                     <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
                         <span className="inline-flex rounded-md shadow-sm">
-                            <a className="bg-teal-500 hover:bg-teal-300 text-white font-bold py-2 px-4 rounded" href="#contact">Contact Me</a>
+                            <a className="bg-blue-700 hover:bg-teal-300 text-white font-bold py-2 px-4 rounded border-solid border-2 border-teal-500" href="#contact">Contact Me</a>
                         </span>
                     </div>
                 </div>

@@ -2,7 +2,7 @@ import Axios from 'axios';
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
-import "./index.css";
+import "../index.css";
 
 class ContactForm extends React.Component {
     constructor(props) {
@@ -62,27 +62,27 @@ class ContactForm extends React.Component {
 
     render () {
       return (
-        <div className="py-12 mx-auto bg-gray-500 border-t-8 border-b-8 border-gray-400">
+        <div className="py-12 mx-auto bg-gray-800 border-t-8 border-b-4 border-blue-800">
             <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="lg:text-center">
-                    <h3 id="contact" className="leading-8 font-extrabold text-gray-900 sm:text-3xl sm:leading-10 lg:text-center">
+                    <h3 id="contact" className="leading-8 font-extrabold text-white sm:text-3xl sm:leading-10 lg:text-center">
                         Contact Me
                     </h3>
                 </div>
                 <br />
                 <Form onSubmit={this.handleSubmit}>
                   <Form.Group>
-                    <Form.Label htmlFor="full-name">Full Name</Form.Label>
+                    <Form.Label className="text-white" htmlFor="full-name">Full Name</Form.Label>
                     <Form.Control id="full-name" name="name" type="text" value={this.state.name} onChange={this.handleChange} />
                   </Form.Group>
 
                   <Form.Group>
-                  <Form.Label htmlFor="email">Email</Form.Label>
+                  <Form.Label className="text-white" htmlFor="email">Email</Form.Label>
                     <Form.Control id="email" name="email" type="email" value={this.state.email} onChange={this.handleChange} />
                   </Form.Group>
 
                   <Form.Group>
-                  <Form.Label htmlFor="message">Message</Form.Label>
+                  <Form.Label className="text-white" htmlFor="message">Message</Form.Label>
                     <Form.Control id="message" name="message" as="textarea" rows="3" value={this.state.message} onChange={this.handleChange} />
                   </Form.Group>
 
