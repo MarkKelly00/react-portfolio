@@ -10,6 +10,8 @@ module.exports = {
             darkFont: "rgb(239, 239, 241)",
         },
     },
-    variants: {},
+    variants: {
+        backgroundColor: ['responsive', 'hover', 'focus', 'active']
+    },
     plugins: [],
 };

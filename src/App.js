@@ -1,10 +1,10 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Carousels from './components/Carousel/Carousel';
 import Header from "./components/Header/Header";
 import CardBody from "./components/Card/Card";
-import ContactForm from "./components/Contact/Contact";
+import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
     return (
@@ -13,12 +13,12 @@ function App() {
         <Switch>
         <Route path='/' component={Header} />
         <Route path='/portfolio' component={CardBody} />
-        <Route path='/contact' component={ContactForm} />
+        <Route path='/contact' component={Contact} />
         </Switch>
       </Router>
     <Carousels />
     <CardBody />
-    <ContactForm />
+    <Contact />
     <Footer />
     </div>
     );

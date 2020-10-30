@@ -11,7 +11,7 @@ function Header() {
 
     return (
         <Router>
-        <div className="relative p-2 bg-gray-800 h-52 border-t-2 border-b-2 border-blue-800 shadow-lg">
+        <div id="top" className="relative p-2 bg-gray-800 h-52 border-t-2 border-b-2 border-blue-800 shadow-lg">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 <div className="flex justify-between items-center border-gray-100 py-6 md:justify-start md:space-x-10">
                     <div className="lg:w-full lg:flex-1">
@@ -106,7 +106,7 @@ function Header() {
 
                     <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
                         <span className="inline-flex rounded-md shadow-sm">
-                            <a className="bg-blue-700 hover:bg-teal-300 text-white font-bold py-2 px-4 rounded border-solid border-2 border-teal-500" href="#contact">Contact Me</a>
+                            <a className="bg-blue-700 hover:bg-teal-300 active:bg-blue-800 focus:outline-none focus:shadow-outline text-white font-bold py-2 px-4 rounded border-solid border-2 border-teal-500" href="#contact">Contact Me</a>
                         </span>
                     </div>
                 </div>

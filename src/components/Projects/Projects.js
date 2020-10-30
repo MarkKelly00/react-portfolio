@@ -20,7 +20,7 @@ function Projects() {
                                         <a href="https://alertifynow.herokuapp.com/" target="_blank" rel="noreferrer">
                                             <img
                                                 className="h-40 w-full object-cover"
-                                                src={Alertify} alt="Alertify"
+                                                src={Alertify} alt="Alertify" title="Used: HTML5, Materialize CSS, JavaScript, jQuery, Node, MongoDB, and Google Maps API"
                                             />
                                         </a>
                                     </div>
@@ -56,7 +56,7 @@ function Projects() {
                                         <a className="hover:text-white" href="https://MarkKelly00.github.io/About-Your-Birthday/" target="_blank" rel="noreferrer">
                                         <img
                                             className="h-48 w-full object-cover"
-                                            src={Birthday} alt="Birthday App"
+                                            src={Birthday} alt="Birthday App" title="Used: HTML5, Tailwind CSS, JavaScript, jQuery, Node"
                                         />
                                         </a>
                                     </div>
@@ -89,7 +89,8 @@ function Projects() {
                                         <a className="hover:text-white" href="https://codel0cker.herokuapp.com/" target="_blank" rel="noreferrer">
                                             <img
                                                 className="h-48 w-full object-cover"
-                                                src={CodeLocker} alt="Note Taker"
+                                                src={CodeLocker} alt="Note Taker" title="Used: MongoDB, Express, React, Node.JS, Auth0, HTML5, TailwindCSS, and Javascript
+                                                "
                                             />
                                         </a>
                                     </div>
@@ -123,7 +124,7 @@ function Projects() {
                                         <a href="https://burgerl0gger.herokuapp.com/burgers" target="_blank" rel="noreferrer">
                                             <img
                                                 className="h-48 w-full object-cover"
-                                                src={Burger} alt="Burger App"
+                                                src={Burger} alt="Burger App" title="Used: MySQL, Node, Javascript, Express, Handlebars, HTML5, BootStrap CSS"
                                             />
                                         </a>
                                     </div>
@@ -153,6 +154,7 @@ function Projects() {
                             </div>
                         </li>
                     </ul>
+                    
                 </div>
     );
     }
