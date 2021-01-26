@@ -3,6 +3,7 @@ import CodeLocker from "../../features/codelocker.png";
 import Birthday from "../../features/birthdayAPI.PNG";
 import Burger from "../../features/burgerApp.png";
 import Alertify from "../../features/alertify_sample.png";
+import './styles.css';
 
 function Projects() {
 
@@ -15,7 +16,7 @@ function Projects() {
                     <ul className="md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
                         <li>
                             <div className="flex">
-                                <div className="flex-shrink-0">
+                                <div className="flex-shrink-0 card-container">
                                     <div className="flex items-center justify-center h-48 w-48 rounded-lg bg-teal-500 overflow-hidden">
                                         <a href="https://alertifynow.herokuapp.com/" target="_blank" rel="noreferrer">
                                             <img
@@ -51,7 +52,7 @@ function Projects() {
                         </li>
                         <li className="mt-10 md:mt-0">
                             <div className="flex">
-                                <div className="flex-shrink-0">
+                                <div className="flex-shrink-0 card-container">
                                     <div className="flex items-center justify-center h-48 w-48 rounded-lg bg-teal-500 overflow-hidden">
                                         <a className="hover:text-white" href="https://MarkKelly00.github.io/About-Your-Birthday/" target="_blank" rel="noreferrer">
                                         <img
@@ -84,7 +85,7 @@ function Projects() {
                         </li>
                         <li className="mt-10 md:mt-0">
                             <div className="flex">
-                                <div className="flex-shrink-0">
+                                <div className="flex-shrink-0 card-container">
                                     <div className="flex items-center justify-center h-48 w-48 rounded-lg bg-teal-500 overflow-hidden">
                                         <a className="hover:text-white" href="https://codel0cker.herokuapp.com/" target="_blank" rel="noreferrer">
                                             <img
@@ -119,7 +120,7 @@ function Projects() {
                         </li>
                         <li className="mt-10 md:mt-0">
                             <div className="flex">
-                                <div className="flex-shrink-0">
+                                <div className="flex-shrink-0 card-container">
                                     <div className="flex items-center justify-center h-48 w-48 rounded-lg bg-teal-500 overflow-hidden">
                                         <a href="https://burgerl0gger.herokuapp.com/burgers" target="_blank" rel="noreferrer">
                                             <img
