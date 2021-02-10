@@ -1,5 +1,8 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import JSP_8684 from '../../features/JSP_8684.jpg';
+import JSP_8934 from '../../features/JSP_8934.jpg';
+import JSP_8587 from '../../features/JSP_8587.jpg';
 
 function Carousels() {
     return (
@@ -15,6 +18,13 @@ function Carousels() {
   </Carousel.Item>
   <Carousel.Item>
     <img
+      className="d-block h-64 center"
+      src={JSP_8684}
+      alt="Second slide"
+    />
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
       className="d-block h-64"
       src="https://live.staticflickr.com/65535/49873322087_2105a3c4f2_b.jpg?text=Second slide&bg=282c34"
       alt="Third slide"
@@ -22,9 +32,23 @@ function Carousels() {
   </Carousel.Item>
   <Carousel.Item>
     <img
+      className="d-block h-64 center"
+      src={JSP_8934}
+      alt="Fourth slide"
+    />
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
       className="d-block h-64"
       src="https://live.staticflickr.com/65535/49873321972_7e9d4833b6_c.jpg?text=Third slide&bg=20232a"
-      alt="Third slide"
+      alt="Fifth slide"
+    />
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block h-64 center"
+      src={JSP_8587}
+      alt="Sixth slide"
     />
   </Carousel.Item>
 </Carousel>

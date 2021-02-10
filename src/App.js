@@ -12,8 +12,8 @@ function App() {
         <Router>
         <Switch>
         <Route path='/' component={Header} />
-        <Route path='/portfolio' component={CardBody} />
-        <Route path='/contact' component={Contact} />
+        <Route path='/#portfolio' component={CardBody} />
+        <Route path='/#contact' component={Contact} />
         </Switch>
       </Router>
     <Carousels />

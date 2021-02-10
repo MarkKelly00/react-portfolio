@@ -1,21 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from 'aos';
 import CodeLocker from "../../features/codelocker.png";
 import Birthday from "../../features/birthdayAPI.PNG";
 import Burger from "../../features/burgerApp.png";
 import Alertify from "../../features/alertify_sample.png";
 import './styles.css';
+import 'aos/dist/aos.css';
 
 function Projects() {
+    useEffect(() => {
+        Aos.init({offset: 300, duration: 2000});
+      }, [])
 
     return (
         <div className="mt-10 mb-4">
-                    <h3 id="portfolio" className="leading-8 font-extrabold text-gray-900 sm:text-3xl sm:leading-10 lg:text-center">
+                    <h3 data-aos="fade-down" id="portfolio" className="leading-8 font-extrabold text-gray-900 sm:text-3xl sm:leading-10 lg:text-center">
                         My Portfolio
                     </h3>
                     <br />
                     <ul className="md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
                         <li>
-                            <div className="flex">
+                            <div className="flex" data-aos="fade-right">
                                 <div className="flex-shrink-0 card-container">
                                     <div className="flex items-center justify-center h-48 w-48 rounded-lg bg-teal-500 overflow-hidden">
                                         <a href="https://alertifynow.herokuapp.com/" target="_blank" rel="noreferrer">
@@ -51,7 +56,7 @@ function Projects() {
                             </div>
                         </li>
                         <li className="mt-10 md:mt-0">
-                            <div className="flex">
+                            <div className="flex" data-aos="fade-left">
                                 <div className="flex-shrink-0 card-container">
                                     <div className="flex items-center justify-center h-48 w-48 rounded-lg bg-teal-500 overflow-hidden">
                                         <a className="hover:text-white" href="https://MarkKelly00.github.io/About-Your-Birthday/" target="_blank" rel="noreferrer">
@@ -84,7 +89,7 @@ function Projects() {
                             </div>
                         </li>
                         <li className="mt-10 md:mt-0">
-                            <div className="flex">
+                            <div className="flex" data-aos="fade-right">
                                 <div className="flex-shrink-0 card-container">
                                     <div className="flex items-center justify-center h-48 w-48 rounded-lg bg-teal-500 overflow-hidden">
                                         <a className="hover:text-white" href="https://codel0cker.herokuapp.com/" target="_blank" rel="noreferrer">
@@ -119,7 +124,7 @@ function Projects() {
                             </div>
                         </li>
                         <li className="mt-10 md:mt-0">
-                            <div className="flex">
+                            <div className="flex" data-aos="fade-left">
                                 <div className="flex-shrink-0 card-container">
                                     <div className="flex items-center justify-center h-48 w-48 rounded-lg bg-teal-500 overflow-hidden">
                                         <a href="https://burgerl0gger.herokuapp.com/burgers" target="_blank" rel="noreferrer">
