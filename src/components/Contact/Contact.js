@@ -30,7 +30,11 @@ function Contact() {
                     className="mt-4 mb-12 max-w-4xl text-lg leading-7 text-white lg:mx-auto"
                     data-aos="fade-up"
                 >
-                    <p>I am currently available for work</p>
+                    <p>
+                    {`
+  Hi~
+`}
+                        I am currently available for work</p>
                     <p>
                         Email: {" "}
                         <a className="hover:text-blue-400" href="mailto:kellymark0101@gmail.com">
@@ -44,7 +48,7 @@ function Contact() {
                     <br />
                     <p>Technologies Known:</p>
                     <br />
-                    <div className="flex content-center flex-wrap h-18">
+                    <div className="flex content-center flex-wrap h-18 w-full">
                         <img
                             className="flex-1 p-2 h-16"
                             src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"
