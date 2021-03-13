@@ -1,7 +1,12 @@
 import React from "react";
+import { animateScroll as scroll } from "react-scroll";
 import "../index.css";
 
 function Contact() {
+    const scrollToTop = () => {
+        scroll.scrollToTop();
+    };
+
     return (
         <div className="py-12 mx-auto bg-gray-800 border-t-8 border-b-4 border-blue-800">
             <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,7 +19,7 @@ function Contact() {
                     </h3>
                 </div>
                 <div className="flex float-right">
-                    <a className="hover:bg-blue-700 active:bg-blue-800 focus:outline-none focus:shadow-outline" href="#top" title="Top Of Page">
+                    <a className="hover:bg-blue-700 active:bg-blue-800 focus:outline-none focus:shadow-outline" onClick={scrollToTop} title="Top Of Page">
                 <i className="fas fa-chevron-up fa-lg" style={{color: "#5091DD"}} />
                 </a>
                 </div>

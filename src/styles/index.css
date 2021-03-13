@@ -32,6 +32,10 @@ code {
     @apply mx-2 rounded-lg py-2 px-4;
 }
 
+a {
+    cursor: pointer;
+}
+
 .todo-btn {
     width: 200px;
 }
