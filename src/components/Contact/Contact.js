@@ -19,9 +19,16 @@ function Contact() {
                     </h3>
                 </div>
                 <div className="flex float-right">
-                    <a className="hover:bg-blue-700 active:bg-blue-800 focus:outline-none focus:shadow-outline" onClick={scrollToTop} title="Top Of Page">
-                <i className="fas fa-chevron-up fa-lg" style={{color: "#5091DD"}} />
-                </a>
+                    <button
+                        className="hover:bg-blue-700 active:bg-blue-800 focus:outline-none focus:shadow-outline"
+                        onClick={scrollToTop}
+                        title="Top Of Page"
+                    >
+                        <i
+                            className="fas fa-chevron-up fa-lg"
+                            style={{ color: "#5091DD" }}
+                        />
+                    </button>
                 </div>
                 <br />
                 <div className="float-left mr-12">
@@ -36,19 +43,28 @@ function Contact() {
                     data-aos="fade-up"
                 >
                     <p>
-                    {`
+                        {`
   Hi~
 `}
-                        I am currently available for work</p>
+                        I am currently available for work
+                    </p>
                     <p>
-                        Email: {" "}
-                        <a className="hover:text-blue-400" href="mailto:kellymark0101@gmail.com">
+                        Email:{" "}
+                        <a
+                            className="hover:text-blue-400"
+                            href="mailto:kellymark0101@gmail.com"
+                        >
                             kellymark0101@gmail.com
                         </a>
                     </p>
                     <p>
                         Phone Number:{" "}
-                        <a className="hover:text-blue-400" href="tel:+1-360-721-9342">(360) 721-9342</a>
+                        <a
+                            className="hover:text-blue-400"
+                            href="tel:+1-360-721-9342"
+                        >
+                            (360) 721-9342
+                        </a>
                     </p>
                     <br />
                     <p>Technologies Known:</p>

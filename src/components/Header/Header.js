@@ -82,7 +82,7 @@ function Header() {
                                                             href={Resume}
                                                             className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
                                                             target="_blank"
-                                                            rel="noreferrer"
+                                                            rel="noopener noreferrer"
                                                         >
                                                             <img
                                                                 width="36"
@@ -103,7 +103,7 @@ function Header() {
                                                             href="https://github.com/MarkKelly00"
                                                             className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
                                                             target="_blank"
-                                                            rel="noreferrer"
+                                                            rel="noopener noreferrer"
                                                         >
                                                             <img
                                                                 width="32"
@@ -124,7 +124,7 @@ function Header() {
                                                             href="https://www.linkedin.com/in/mark-kelly-9a1436160/"
                                                             className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
                                                             target="_blank"
-                                                            rel="noreferrer"
+                                                            rel="noopener noreferrer"
                                                         >
                                                             <img
                                                                 width="32"
