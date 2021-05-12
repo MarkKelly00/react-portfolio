@@ -50,6 +50,7 @@ function Header() {
                             </Link>
 
                             <div className="relative">
+                            {!isOpen ? (
                                 <button
                                     type="button"
                                     className="text-white inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-600"
@@ -60,7 +61,18 @@ function Header() {
                                     <span>More </span>
                                     <i className="fas fa-caret-down" />
                                 </button>
-
+                                ) : (
+                                    <button
+                                    type="button"
+                                    className="text-white inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-600"
+                                    onClick={() => {
+                                        setIsOpen(!isOpen);
+                                    }}
+                                >
+                                    <span>More </span>
+                                    <i className="fas fa-caret-up" />
+                                </button>
+                                )}
                                 <Transition
                                     show={isOpen}
                                     enter="transition ease-out duration-100 transform"
