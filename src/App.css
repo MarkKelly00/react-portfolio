@@ -36,6 +36,14 @@
     margin-right: auto;
 }
 
+.scrollChev {
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
 @keyframes App-logo-float {
     0% {
         transform: translateY(0);
@@ -47,5 +55,16 @@
 
     100% {
         transform: translateY(0);
+    }
+}
+
+@media (max-width: 640px) {
+    .social-link {
+        width: 100%;
+        text-align: center;
+    }
+    .scrollChev {
+        right: 2%;
+        bottom: 2%;
     }
 }

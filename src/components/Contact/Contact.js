@@ -1,16 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { animateScroll as scroll } from "react-scroll";
-import "../index.css";
+import "../../App.css";
 
 // Reusable component for technology icons
 const TechnologyIcon = ({ src, alt }) => (
-    <img className="flex-1 p-2 h-16" src={src} alt={alt} />
+    <img
+        className="h-16 w-16 m-4 transition-transform duration-300 transform hover:scale-110"
+        src={src}
+        alt={alt}
+    />
 );
 
 function Contact() {
-    const scrollToTop = () => {
-        scroll.scrollToTop();
-    };
+    const [showScrollButton, setShowScrollButton] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            const threshold = window.innerHeight * 0.2;
+
+            if (scrollPosition > threshold) {
+                setShowScrollButton(true);
+            } else {
+                setShowScrollButton(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     const technologies = [
         {
@@ -66,63 +87,88 @@ function Contact() {
     ];
 
     return (
-        <div className="py-12 mx-auto bg-gray-800 border-t-8 border-b-4 border-blue-800">
-            <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="lg:text-center">
-                    <h3
-                        id="contact"
-                        className="leading-8 font-extrabold text-white sm:text-3xl sm:leading-10 lg:text-center"
-                    >
-                        Contact Me
-                    </h3>
+        <div className="py-8 mx-auto bg-gray-900 text-gray-100 border-t-8 border-sky-500">
+            <div className="max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-12">
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                    <div className="text-center lg:text-left">
+                        <h3
+                            id="contact"
+                            className="text-4xl font-extrabold text-sky-400 sm:text-5xl"
+                        >
+                            Contact Me
+                        </h3>
+                        <p className="mt-4 text-lg leading-7 text-gray-300 max-w-2xl">
+                            I'm currently available for work and would love to
+                            connect. Feel free to reach out via email or check
+                            out my social profiles below!
+                        </p>
+                        <div className="mt-8 flex flex-wrap gap-4 justify-center">
+                            {/* GitHub Personal */}
+                            <a
+                                href="https://github.com/MarkKelly00"
+                                className="flex items-center space-x-2 text-base font-medium hover:text-gray-600 hover:no-underline transition-colors duration-300"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <i className="fab fa-github fa-2x text-sky-400"></i>
+                                <span>GitHub (Personal)</span>
+                            </a>
+
+                            {/* LinkedIn */}
+                            <a
+                                href="https://www.linkedin.com/in/mark-kelly-9a1436160/"
+                                className="flex items-center space-x-2 text-base font-medium hover:text-gray-600 hover:no-underline transition-colors duration-300"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <i className="fab fa-linkedin fa-2x text-sky-400"></i>
+                                <span>LinkedIn</span>
+                            </a>
+
+                            {/* GitHub Work */}
+                            <a
+                                href="https://github.com/orgs/HydroJug/people/MKHydroJ"
+                                className="flex items-center space-x-2 text-base font-medium hover:text-gray-600 hover:no-underline transition-colors duration-300"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <i className="fab fa-github fa-2x text-sky-400"></i>
+                                <span>GitHub (Work)</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* Profile Image */}
+                    <div className="flex justify-center lg:justify-end">
+                        <img
+                            className="h-64 w-64 rounded-full border-4 border-sky-500 shadow-lg object-cover"
+                            src="https://ca.slack-edge.com/T010U5GV2LT-U011RAC9CSK-f42f5d183d7d-512?text=First"
+                            alt="Mark Kelly"
+                        />
+                    </div>
                 </div>
-                <br />
 
                 {/* Scroll to top button */}
-                <div className="flex float-right">
+                <div
+                    className={`scrollChev ${
+                        showScrollButton ? "opacity-100" : "opacity-0"
+                    }`}
+                >
                     <button
-                        className="hover:bg-blue-700 active:bg-blue-800 focus:outline-none focus:shadow-outline"
-                        onClick={scrollToTop}
+                        className="bg-sky-500 text-white p-3 rounded-full shadow-md hover:bg-sky-400 active:bg-sky-600 focus:outline-none focus:ring-4 focus:ring-sky-300"
+                        onClick={() => scroll.scrollToTop()}
                         title="Top Of Page"
                     >
-                        <i
-                            className="fas fa-chevron-up fa-lg"
-                            style={{ color: "#5091DD" }}
-                        />
+                        <i className="fas fa-chevron-up fa-lg" />
                     </button>
                 </div>
 
-                <br />
-
-                {/* Profile Image */}
-                <div className="float-left mr-12">
-                    <img
-                        className="flex-1 p-2 h-64 rounded-full flex items-center justify-center"
-                        src="https://ca.slack-edge.com/T010U5GV2LT-U011RAC9CSK-f42f5d183d7d-512?text=First"
-                        alt="Mark Kelly"
-                    />
-                </div>
-
-                {/* Contact Information */}
-                <div
-                    className="mt-4 mb-12 max-w-4xl text-lg leading-7 text-white lg:mx-auto"
-                    data-aos="fade-up"
-                >
-                    <p>Hi~ I am currently available for work</p>
-                    <p>
-                        Email:{" "}
-                        <a
-                            className="hover:text-blue-400"
-                            href="mailto:kellymark0101@gmail.com"
-                        >
-                            kellymark0101@gmail.com
-                        </a>
-                    </p>
-
-                    <br />
-
-                    <p>Technologies Known:</p>
-                    <div className="flex content-center flex-wrap h-18 w-70%">
+                {/* Technologies Known */}
+                <div className="mt-16">
+                    <h4 className="text-2xl font-semibold text-center text-sky-400 mb-8">
+                        Technologies I'm Proficient In
+                    </h4>
+                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 w-56 lg:w-auto max-w-2xl mx-auto">
                         {technologies.map((tech, index) => (
                             <TechnologyIcon
                                 key={index}

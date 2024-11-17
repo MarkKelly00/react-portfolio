@@ -46,87 +46,77 @@ function CardBody() {
     ];
 
     return (
-        <div className="py-6">
-            <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="lg:text-center">
-                    <h3
-                        id="about"
-                        data-aos="fade-left"
-                        className="leading-8 font-extrabold text-gray-900 sm:text-3xl sm:leading-10 lg:text-center"
-                    >
-                        About Me
-                    </h3>
-                    <p
-                        data-aos="fade-right"
-                        className="mt-4 max-w-4xl text-lg leading-7 text-white lg:mx-auto"
-                    >
-                        Hello! I'm Mark Kelly, a Full Stack Developer with
-                        expertise in e-commerce and web development. Currently,
-                        I lead development for{" "}
-                        <a href="https://thehydrojug.com/">HydroJug</a> and{" "}
-                        <a href="https://actawear.com/">ActaWear</a>, where I
-                        focus on crafting functional, high-performance websites.
-                        I design, build, and optimize e-commerce experiences,
-                        from custom product configurators to advanced bundling
-                        and navigation improvements.
-                    </p>
-                    <p
-                        data-aos="fade-left"
-                        className="mt-4 max-w-4xl text-lg leading-7 text-white lg:mx-auto"
-                    >
-                        With a keen eye for optimization, I've led initiatives
-                        that significantly improved loading times and conversion
-                        rates. Collaborating closely with cross-functional
-                        teams, I help enhance our sites’ impact on user
-                        engagement and sales growth. From laser etching software
-                        to custom bundling, I build solutions that streamline
-                        processes and scale effectively.
-                    </p>
-                    <p
-                        data-aos="fade-right"
-                        className="mt-4 max-w-4xl text-lg leading-7 text-white lg:mx-auto"
-                    >
-                        Outside of work, I’m a dedicated Father of two. I enjoy
-                        football, both playing and analyzing it through Fantasy
-                        Football, and I’m a passionate gamer with favorites like
-                        "Call of Duty" and "Halo." Other hobbies include Golf,
-                        Skiing, and Pickleball.
-                    </p>
-                    <p
-                        data-aos="fade-left"
-                        className="mt-4 max-w-4xl text-lg leading-7 text-white lg:mx-auto"
-                    >
-                        Feel free to browse my projects below, including
-                        CodeLocker, a team-based project developed at the
-                        University of Oregon using the MERN stack. Visit my
-                        LinkedIn, GitHub, or resume through the "More" tab.
-                        Reach out if you'd like to connect!
-                    </p>
+        <>
+            <div className="py-8 bg-gray-900 text-gray-100">
+                <div className="container mx-auto px-6 md:px-12">
+                    <div className="text-center mb-12">
+                        <h3
+                            data-aos="fade-left"
+                            className="text-3xl font-bold text-sky-400 sm:text-4xl"
+                        >
+                            About Me
+                        </h3>
+                        <p
+                            data-aos="fade-right"
+                            className="mt-6 text-lg leading-relaxed text-gray-300 max-w-3xl mx-auto"
+                        >
+                            Hello! I'm Mark Kelly, a Full Stack Developer
+                            specializing in e-commerce and web development. I
+                            have extensive experience designing, building, and
+                            optimizing websites to deliver top-tier user
+                            experiences and drive business results.
+                        </p>
+                        <p
+                            data-aos="fade-right"
+                            className="mt-4 text-lg leading-relaxed text-gray-300 max-w-3xl mx-auto"
+                        >
+                            In my role as a Web Developer at HydroJug and
+                            ActaWear, I led web development projects, designing
+                            and building TheHydroJug.com, TheHydroJug.co.uk, and
+                            ActaWear.com. I spearheaded site speed optimization
+                            efforts, improving loading times, and conducted A/B
+                            testing using HotJar recordings to enhance user
+                            engagement and conversions. My initiatives increased
+                            Average Order Value (AOV) and conversion rates
+                            through custom product features and segmented
+                            collection pages.
+                        </p>
+                        <p
+                            data-aos="fade-right"
+                            className="mt-4 text-lg leading-relaxed text-gray-300 max-w-3xl mx-auto"
+                        >
+                            I also developed and integrated product
+                            customization software that automated laser etching
+                            processes, reducing lead times and boosting
+                            production capacity. Managing product launches,
+                            coordinating cross-functional teams, and
+                            collaborating with marketing for SEO and landing
+                            page optimizations were key aspects of my role,
+                            ensuring seamless feature implementation and
+                            improved site performance.
+                        </p>
+                    </div>
+                    <Projects />
+                    <div className="bg-gray-800 p-6 rounded-xl shadow-lg border-t-4 border-sky-500 mt-6">
+                        <h2
+                            data-aos="fade-up"
+                            className="text-2xl font-semibold mb-4 text-sky-300"
+                        >
+                            <i className="fas fa-medal mr-2" /> Accomplishments
+                            (USAF)
+                        </h2>
+                        <ul className="list-disc list-inside space-y-3">
+                            {accomplishments.map((accomplishment, index) => (
+                                <Accomplishment
+                                    key={index}
+                                    {...accomplishment}
+                                />
+                            ))}
+                        </ul>
+                    </div>
                 </div>
-
-                <div className="mt-8 p-8 border-t-4 border-b-4 border-gray-400">
-                    <h2
-                        data-aos="fade-up"
-                        className="leading-8 font-extrabold text-gray-900 sm:text-xl sm:leading-10 lg:text-center"
-                    >
-                        <i className="fas fa-medal" />
-                        <strong> Accomplishments (USAF)</strong>
-                    </h2>
-                    <ul className="mt-4 max-w-4xl text-lg leading-7 text-white lg:mx-auto list-disc">
-                        {accomplishments.map((accomplishment, index) => (
-                            <Accomplishment
-                                key={index}
-                                title={accomplishment.title}
-                                year={accomplishment.year}
-                                description={accomplishment.description}
-                            />
-                        ))}
-                    </ul>
-                </div>
-
-                <Projects />
             </div>
-        </div>
+        </>
     );
 }
 

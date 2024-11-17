@@ -2,180 +2,200 @@ import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { Transition } from "@tailwindui/react";
 import Logo from "../../features/MyLogo.png";
-// import Resume from "../../features/Resume.pdf";
+import GHLogo from "../../features/gh-logo.png";
+import LinkedLogo from "../../features/Linkedin-logo.png";
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (
-        <div
-            id="top"
-            className="relative p-2 bg-gray-800 h-52 border-t-2 border-b-2 border-blue-800 shadow-lg"
-        >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6">
-                <div className="flex justify-between items-center border-gray-100 py-6 md:justify-start md:space-x-10">
-                    <div className="lg:w-full lg:flex-1">
-                        <img
-                            href="https://markkelly.dev"
-                            src={Logo}
-                            alt="MK-Logo"
-                        />
+        <header className="bg-gray-800 text-gray-100 shadow-lg sticky top-0 z-50 border-b-2 border-blue-800">
+            <div className="relative max-w-screen-xl left-[3rem] mx-auto px-6 py-4 flex items-center justify-between">
+                <div className="flex items-center space-x-4">
+                    <a href="https://markkelly.dev">
+                        <img src={Logo} alt="MK-Logo" className="h-12 w-auto" />
+                    </a>
+                </div>
+                <nav className="hidden md:flex space-x-8">
+                    <Link
+                        activeClass="text-gray-600"
+                        to="about"
+                        spy
+                        smooth
+                        offset={-70}
+                        duration={700}
+                        className="text-base font-medium text-gray-300 hover:text-gray-600 cursor-pointer"
+                    >
+                        About
+                    </Link>
+                    <Link
+                        activeClass="text-gray-600"
+                        to="portfolio"
+                        spy
+                        smooth
+                        offset={-70}
+                        duration={700}
+                        className="text-base font-medium text-gray-300 hover:text-gray-600 cursor-pointer"
+                    >
+                        Portfolio
+                    </Link>
+                    <div className="relative">
+                        <button
+                            type="button"
+                            className="text-gray-300 inline-flex items-center space-x-2 text-base font-medium hover:text-gray-600"
+                            onClick={() => setIsOpen(!isOpen)}
+                        >
+                            <span>More</span>
+                            <i
+                                className={`fas fa-caret-${
+                                    isOpen ? "up" : "down"
+                                }`}
+                            />
+                        </button>
+                        <Transition
+                            show={isOpen}
+                            enter="transition ease-out duration-200"
+                            enterFrom="opacity-0 translate-y-4"
+                            enterTo="opacity-100 translate-y-0"
+                            leave="transition ease-in duration-150"
+                            leaveFrom="opacity-100 translate-y-0"
+                            leaveTo="opacity-0 translate-y-4"
+                        >
+                            {(ref) => (
+                                <div
+                                    ref={ref}
+                                    className="absolute right-0 mt-4 w-56 rounded-lg shadow-lg bg-gray-800 z-40 border border-gray-700"
+                                >
+                                    <div className="py-4">
+                                        <a
+                                            href="https://github.com/MarkKelly00"
+                                            className="flex items-center px-4 py-2 text-base font-medium text-gray-100 hover:bg-gray-700 hover:text-gray-600 rounded-md transition-colors duration-200"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <img
+                                                width="25"
+                                                className="mr-3"
+                                                src={GHLogo}
+                                                alt="GitHub"
+                                            />
+                                            GitHub (Personal)
+                                        </a>
+                                        <a
+                                            href="https://github.com/orgs/HydroJug/people/MKHydroJ"
+                                            className="flex items-center px-4 py-2 text-base font-medium text-gray-100 hover:bg-gray-700 hover:text-gray-600 rounded-md transition-colors duration-200"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <img
+                                                width="25"
+                                                className="mr-3"
+                                                src={GHLogo}
+                                                alt="GitHub Logo"
+                                            />
+                                            GitHub (Work)
+                                        </a>
+                                        <a
+                                            href="https://www.linkedin.com/in/mark-kelly-9a1436160/"
+                                            className="flex items-center px-4 py-2 text-base font-medium text-gray-100 hover:bg-gray-700 hover:text-gray-600 rounded-md transition-colors duration-200"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <img
+                                                width="25"
+                                                className="mr-3"
+                                                src={LinkedLogo}
+                                                alt="LinkedIn"
+                                            />
+                                            LinkedIn
+                                        </a>
+                                    </div>
+                                </div>
+                            )}
+                        </Transition>
                     </div>
+                </nav>
+                <div className="hidden md:flex items-center space-x-4 hover:text-gray-600 hover:bg-gray-700">
+                    <Link
+                        activeClass="text-gray-600"
+                        to="contact"
+                        spy
+                        smooth
+                        offset={-70}
+                        duration={600}
+                        className="text-white font-bold py-2 px-6 rounded-lg hover:text-gray-600 transition-all duration-300 shadow-md border-2 border-white"
+                    >
+                        Contact Me
+                    </Link>
+                </div>
+                {/* Mobile Menu Button */}
+                <div className="md:hidden">
+                    <button
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        className="text-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                    >
+                        <i
+                            className={`fas fa-${
+                                isMobileMenuOpen ? "times" : "bars"
+                            } fa-2x`}
+                        ></i>
+                    </button>
+                </div>
+            </div>
 
-                    <nav className="hidden md:flex space-x-10">
+            {/* Mobile Menu */}
+            <Transition
+                show={isMobileMenuOpen}
+                enter="transition ease-out duration-200"
+                enterFrom="opacity-0 translate-y-4"
+                enterTo="opacity-100 translate-y-0"
+                leave="transition ease-in duration-150"
+                leaveFrom="opacity-100 translate-y-0"
+                leaveTo="opacity-0 translate-y-4"
+            >
+                <div className="md:hidden bg-gray-800 border-t border-gray-700">
+                    <div className="px-4 pt-4 pb-3 space-y-1">
                         <Link
-                            activeClass="active"
+                            activeClass="text-gray-600"
                             to="about"
-                            spy={true}
-                            smooth={true}
+                            spy
+                            smooth
                             offset={-70}
                             duration={700}
-                            className="text-base leading-6 font-medium text-white hover:text-gray-600"
+                            className="block text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-gray-600 rounded-md px-4 py-2"
+                            onClick={() => setIsMobileMenuOpen(false)}
                         >
                             About
                         </Link>
                         <Link
-                            activeClass="active"
+                            activeClass="text-gray-600"
                             to="portfolio"
-                            spy={true}
-                            smooth={true}
+                            spy
+                            smooth
                             offset={-70}
                             duration={700}
-                            className="text-base leading-6 font-medium text-white hover:text-gray-600"
+                            className="block text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-gray-600 rounded-md px-4 py-2"
+                            onClick={() => setIsMobileMenuOpen(false)}
                         >
                             Portfolio
                         </Link>
-
-                        <div className="relative">
-                            {!isOpen ? (
-                                <button
-                                    type="button"
-                                    className="text-white inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-600"
-                                    onClick={() => {
-                                        setIsOpen(!isOpen);
-                                    }}
-                                >
-                                    <span>More </span>
-                                    <i className="fas fa-caret-down" />
-                                </button>
-                            ) : (
-                                <button
-                                    type="button"
-                                    className="text-white inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-600"
-                                    onClick={() => {
-                                        setIsOpen(!isOpen);
-                                    }}
-                                >
-                                    <span>More </span>
-                                    <i className="fas fa-caret-up" />
-                                </button>
-                            )}
-                            <Transition
-                                show={isOpen}
-                                enter="transition ease-out duration-100 transform"
-                                enterFrom="opacity-0 scale-95"
-                                enterTo="opacity-100 scale-100"
-                                leave="transition ease-in duration-75 transform"
-                                leaveFrom="opacity-100 scale-100"
-                                leaveTo="opacity-0 scale-95"
-                            >
-                                {(ref) => (
-                                    <div
-                                        ref={ref}
-                                        className="absolute left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0"
-                                    >
-                                        <div className="rounded-lg shadow-lg">
-                                            <div className="rounded-lg shadow-xs overflow-hidden">
-                                                <div className="z-20 relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                                                    {/* <a
-                                                        href={Resume}
-                                                        className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                    >
-                                                        <img
-                                                            width="36"
-                                                            src="https://www.flaticon.com/svg/static/icons/svg/58/58600.svg"
-                                                            alt="resume"
-                                                        />
-                                                        <div className="space-y-1">
-                                                            <p className="text-base leading-6 font-medium text-gray-900">
-                                                                My Resume
-                                                            </p>
-                                                            <p className="text-sm leading-5 text-gray-500">
-                                                                View My
-                                                                Resume.pdf
-                                                            </p>
-                                                        </div>
-                                                    </a> */}
-                                                    <a
-                                                        href="https://github.com/MarkKelly00"
-                                                        className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                    >
-                                                        <img
-                                                            width="32"
-                                                            src="https://seeklogo.com/images/G/github-logo-7880D80B8D-seeklogo.com.png"
-                                                            alt="GitHub"
-                                                        />
-                                                        <div className="space-y-1">
-                                                            <p className="text-base leading-6 font-medium text-gray-900">
-                                                                GitHub
-                                                            </p>
-                                                            <p className="text-sm leading-5 text-gray-500">
-                                                                View My GitHub
-                                                                Repo
-                                                            </p>
-                                                        </div>
-                                                    </a>
-                                                    <a
-                                                        href="https://www.linkedin.com/in/mark-kelly-9a1436160/"
-                                                        className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                    >
-                                                        <img
-                                                            width="32"
-                                                            src="https://seeklogo.com/images/L/linkedin-icon-logo-05B2880899-seeklogo.com.png"
-                                                            alt="LinkedIn"
-                                                        />
-                                                        <div className="space-y-1">
-                                                            <p className="text-base leading-6 font-medium text-gray-900">
-                                                                LinkedIn
-                                                            </p>
-                                                            <p className="text-sm leading-5 text-gray-500">
-                                                                View My LinkedIn
-                                                            </p>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                )}
-                            </Transition>
-                        </div>
-                    </nav>
-
-                    <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
-                        <span className="inline-flex rounded-md shadow-sm">
-                            <Link
-                                activeClass="active"
-                                to="contact"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={600}
-                                className="bg-blue-700 hover:bg-teal-300 active:bg-blue-800 focus:outline-none focus:shadow-outline text-white font-bold py-2 px-4 rounded border-solid border-2 border-teal-500"
-                            >
-                                Contact Me
-                            </Link>
-                        </span>
+                        <Link
+                            activeClass="text-gray-600"
+                            to="contact"
+                            spy
+                            smooth
+                            offset={-70}
+                            duration={600}
+                            className="block text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-gray-600 rounded-md px-4 py-2"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                            Contact Me
+                        </Link>
                     </div>
                 </div>
-            </div>
-        </div>
+            </Transition>
+        </header>
     );
 }
 
