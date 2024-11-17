@@ -1,20 +1,23 @@
 # My Portfolio
+
 ![License: Mark Kelly](https://img.shields.io/badge/License-Mark_Kelly-brightgreen.svg)
 
 ### About Me
-I am a Full Stack Developer; Certified by the University of Oregon. This is my website with an About Me, Portfolio, and Contact section. It's React based with CSS integration. Using CSS from TailWind, I was able to make the website very functional, consistent, and aesthetically appealing. 
+
+I am a Full Stack Developer; Certified by the University of Oregon. This is my website with an About Me, Portfolio, and Contact section. It's React based with CSS integration. Using CSS from TailWind, I was able to make the website very functional, consistent, and aesthetically appealing.
 The navbar includes the following pages:
 
-* About Me (view for my bio)
+-   About Me (view for my bio)
 
-* Portfolio (view for my work)
+-   Portfolio (view for my work)
 
-* Contact Me (via form mail)
+-   Contact Me (via form mail)
 
-* More (Resume, GitHub, LinkedIn)
+-   More (Resume, GitHub, LinkedIn)
 
 ## Known Technologies
-<p align="left">
+
+<p align="center">
 <code>
 <img height="32" width="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />
 <img height="32" width="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" />
@@ -31,6 +34,7 @@ The navbar includes the following pages:
 </p>
 
 ---
-![MyPortfolio](./src/features/portIMG.png)
+
+![MyPortfolio](./src/features/React-Portfolio-24.png)
 
 **Deployable Link** - https://markkelly.dev
