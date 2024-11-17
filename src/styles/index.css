@@ -43,3 +43,27 @@ a {
 .todo-btn--selected {
     @apply bg-blue-700;
 }
+
+.carousel-container .slick-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+}
+
+.slick-dots {
+    bottom: 10px;
+}
+
+.slick-dots li button:before {
+    color: white;
+}
+
+.slick-prev, .slick-next {
+    color: white;
+}

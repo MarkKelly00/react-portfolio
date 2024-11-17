@@ -2,10 +2,68 @@ import React from "react";
 import { animateScroll as scroll } from "react-scroll";
 import "../index.css";
 
+// Reusable component for technology icons
+const TechnologyIcon = ({ src, alt }) => (
+    <img className="flex-1 p-2 h-16" src={src} alt={alt} />
+);
+
 function Contact() {
     const scrollToTop = () => {
         scroll.scrollToTop();
     };
+
+    const technologies = [
+        {
+            src:
+                "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png",
+            alt: "html5",
+        },
+        {
+            src:
+                "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png",
+            alt: "css3",
+        },
+        {
+            src:
+                "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/tailwind/tailwind.png",
+            alt: "tailwind",
+        },
+        {
+            src:
+                "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png",
+            alt: "JS",
+        },
+        {
+            src:
+                "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png",
+            alt: "node",
+        },
+        {
+            src:
+                "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png",
+            alt: "react",
+        },
+        {
+            src:
+                "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/express/express.png",
+            alt: "express",
+        },
+        {
+            src:
+                "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png",
+            alt: "MySQL",
+        },
+        {
+            src:
+                "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongodb/mongodb.png",
+            alt: "MongoDB",
+        },
+        {
+            src:
+                "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png",
+            alt: "Py",
+        },
+    ];
 
     return (
         <div className="py-12 mx-auto bg-gray-800 border-t-8 border-b-4 border-blue-800">
@@ -18,6 +76,9 @@ function Contact() {
                         Contact Me
                     </h3>
                 </div>
+                <br />
+
+                {/* Scroll to top button */}
                 <div className="flex float-right">
                     <button
                         className="hover:bg-blue-700 active:bg-blue-800 focus:outline-none focus:shadow-outline"
@@ -30,7 +91,10 @@ function Contact() {
                         />
                     </button>
                 </div>
+
                 <br />
+
+                {/* Profile Image */}
                 <div className="float-left mr-12">
                     <img
                         className="flex-1 p-2 h-64 rounded-full flex items-center justify-center"
@@ -38,16 +102,13 @@ function Contact() {
                         alt="Mark Kelly"
                     />
                 </div>
+
+                {/* Contact Information */}
                 <div
                     className="mt-4 mb-12 max-w-4xl text-lg leading-7 text-white lg:mx-auto"
                     data-aos="fade-up"
                 >
-                    <p>
-                        {`
-  Hi~
-`}
-                        I am currently available for work
-                    </p>
+                    <p>Hi~ I am currently available for work</p>
                     <p>
                         Email:{" "}
                         <a
@@ -57,74 +118,18 @@ function Contact() {
                             kellymark0101@gmail.com
                         </a>
                     </p>
-                    <p>
-                        Phone Number:{" "}
-                        <a
-                            className="hover:text-blue-400"
-                            href="tel:+1-360-721-9342"
-                        >
-                            (360) 721-9342
-                        </a>
-                    </p>
+
                     <br />
+
                     <p>Technologies Known:</p>
-                    <br />
-                    <div className="flex content-center flex-wrap h-18 w-full">
-                        <img
-                            className="flex-1 p-2 h-16"
-                            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"
-                            alt="html5"
-                        />
-                        <img
-                            className="flex-1 p-2 h-16"
-                            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"
-                            alt="css3"
-                        />
-                        <img
-                            className="flex-1 p-2 h-16"
-                            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/tailwind/tailwind.png"
-                            alt="tailwind"
-                        />
-                        <img
-                            className="flex-1 p-2 h-16"
-                            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png"
-                            alt="bootstrap"
-                        />
-                        <img
-                            className="flex-1 p-2 h-16"
-                            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"
-                            alt="JS"
-                        />
-                        <img
-                            className="flex-1 p-2 h-16"
-                            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png"
-                            alt="node"
-                        />
-                        <img
-                            className="flex-1 p-2 h-16"
-                            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"
-                            alt="react"
-                        />
-                        <img
-                            className="flex-1 p-2 h-16"
-                            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/express/express.png"
-                            alt="express"
-                        />
-                        <img
-                            className="flex-1 p-2 h-16"
-                            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png"
-                            alt="MySQL"
-                        />
-                        <img
-                            className="flex-1 p-2 h-16"
-                            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongodb/mongodb.png"
-                            alt="MongoDB"
-                        />
-                        <img
-                            className="flex-1 p-2 h-16"
-                            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png"
-                            alt="Py"
-                        />
+                    <div className="flex content-center flex-wrap h-18 w-70%">
+                        {technologies.map((tech, index) => (
+                            <TechnologyIcon
+                                key={index}
+                                src={tech.src}
+                                alt={tech.alt}
+                            />
+                        ))}
                     </div>
                 </div>
             </div>

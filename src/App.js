@@ -1,26 +1,24 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Carousels from './components/Carousel/Carousel';
-import Header from "./components/Header/Header";
+import { BrowserRouter as Router } from "react-router-dom";
+import AppRoutes from "./routes/Routes";
+// import Carousels from "./components/Carousel/Carousel";
 import CardBody from "./components/Card/Card";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
     return (
-      <div>
-        <Router>
-        <Switch>
-        <Route path='/' component={Header} />
-        <Route path='/#portfolio' component={CardBody} />
-        <Route path='/#contact' component={Contact} />
-        </Switch>
-      </Router>
-    <Carousels />
-    <CardBody />
-    <Contact />
-    <Footer />
-    </div>
+        <div>
+            <Router>
+                <AppRoutes />
+            </Router>
+            {/* <Carousels /> */}
+            <CardBody />
+            <Contact />
+            <Footer />
+        </div>
     );
 }
 
