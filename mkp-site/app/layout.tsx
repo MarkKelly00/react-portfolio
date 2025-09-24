@@ -10,6 +10,21 @@ export const metadata: Metadata = {
   title: 'Mark Kelly Productions LLC – Web Design & Development',
   description: 'Custom web design, Shopify/Hydrogen storefronts, performance and e‑commerce by Mark Kelly Productions LLC.',
   metadataBase: new URL('https://markkelly.dev'),
+  icons: {
+    icon: [
+      { url: '/assets/favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/assets/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/assets/favicon/favicon.ico' }
+    ],
+    apple: [
+      { url: '/assets/favicon/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
+    ],
+    other: [
+      { url: '/assets/favicon/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/assets/favicon/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' }
+    ]
+  },
+  manifest: '/assets/favicon/site.webmanifest',
   openGraph: {
     title: 'Mark Kelly Productions LLC',
     description: 'Web design & development studio building high-performance experiences.',
