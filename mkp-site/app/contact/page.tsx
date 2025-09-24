@@ -1,6 +1,7 @@
 "use client";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { useForm as useFormspree, ValidationError } from '@formspree/react';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 
@@ -13,27 +14,50 @@ type FormInputs = {
 };
 
 export default function ContactPage() {
-  const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm<FormInputs>();
-  const [status, setStatus] = useState<string | null>(null);
+  const { register, handleSubmit, reset, formState: { errors } } = useForm<FormInputs>();
+  const [formspreeState, handleFormspreeSubmit] = useFormspree("mdkwojgq");
 
   const onSubmit = async (data: FormInputs) => {
-    setStatus(null);
-    try {
-      const res = await fetch('https://formspree.io/f/xpwaqrvv', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      });
-      if (res.ok) {
-        setStatus('Thanks! We will get back to you shortly.');
-        reset();
-      } else {
-        setStatus('Something went wrong. Please try again.');
-      }
-    } catch (error) {
-      setStatus('Something went wrong. Please try again.');
+    // Create a form event-like object for Formspree
+    const formData = new FormData();
+    formData.append('name', data.name);
+    formData.append('email', data.email);
+    formData.append('company', data.company || '');
+    formData.append('interest', data.interest || '');
+    formData.append('message', data.message);
+
+    // Submit to Formspree
+    await handleFormspreeSubmit(formData);
+    
+    // Reset the form if submission was successful
+    if (formspreeState.succeeded) {
+      reset();
     }
   };
+
+  // Show success message if Formspree submission succeeded
+  if (formspreeState.succeeded) {
+    return (
+      <>
+        <Header />
+        <main className="pt-28 md:pt-36">
+          <section className="container-grid text-center">
+            <h1 className="heading-lg">Thank You!</h1>
+            <p className="mt-3 text-osloGray max-w-2xl font-body-extended mx-auto">
+              Thanks for reaching out! We'll get back to you shortly.
+            </p>
+            <button 
+              onClick={() => window.location.reload()} 
+              className="mt-6 btn-primary"
+            >
+              Send Another Message
+            </button>
+          </section>
+        </main>
+        <Footer />
+      </>
+    );
+  }
 
   return (
     <>
@@ -48,11 +72,13 @@ export default function ContactPage() {
               <label className="block text-sm text-osloGray font-body-condensed font-semibold">Name</label>
               <input className="mt-2 w-full rounded-lg bg-capeCod/30 border border-capeCod/40 px-4 py-3" {...register('name', { required: true })} />
               {errors.name && <p className="mt-1 text-xs text-fuelYellow">Required</p>}
+              <ValidationError prefix="Name" field="name" errors={formspreeState.errors} />
             </div>
             <div>
               <label className="block text-sm text-osloGray font-body-condensed font-semibold">Email</label>
               <input type="email" className="mt-2 w-full rounded-lg bg-capeCod/30 border border-capeCod/40 px-4 py-3" {...register('email', { required: true })} />
               {errors.email && <p className="mt-1 text-xs text-fuelYellow">Required</p>}
+              <ValidationError prefix="Email" field="email" errors={formspreeState.errors} />
             </div>
             <div>
               <label className="block text-sm text-osloGray font-body-condensed font-semibold">Service of Interest</label>
@@ -71,10 +97,13 @@ export default function ContactPage() {
               <label className="block text-sm text-osloGray font-body-condensed font-semibold">Message</label>
               <textarea rows={6} className="mt-2 w-full rounded-lg bg-capeCod/30 border border-capeCod/40 px-4 py-3" {...register('message', { required: true })} />
               {errors.message && <p className="mt-1 text-xs text-fuelYellow">Required</p>}
+              <ValidationError prefix="Message" field="message" errors={formspreeState.errors} />
             </div>
             <div className="md:col-span-2 flex items-center gap-4">
-              <button disabled={isSubmitting} className="btn-primary disabled:opacity-60" type="submit">Send</button>
-              {status && <span className="text-osloGray">{status}</span>}
+              <button disabled={formspreeState.submitting} className="btn-primary disabled:opacity-60" type="submit">
+                {formspreeState.submitting ? 'Sending...' : 'Send'}
+              </button>
+              {formspreeState.errors && <span className="text-fuelYellow">Please check your form and try again.</span>}
             </div>
           </form>
         </section>
