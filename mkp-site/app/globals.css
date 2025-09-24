@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('/fonts.css');
+
+:root {
+  --color-bg: #151213;
+  --color-text: #e9d5bf;
+}
+
+html, body {
+  @apply bg-codGray text-doubleSpanishWhite font-body scroll-smooth;
+}
+
+.gradient-accent {
+  background: radial-gradient(1200px 600px at 90% -10%, rgba(240, 158, 44, 0.25), transparent 60%),
+              radial-gradient(1200px 600px at 10% -10%, rgba(32, 49, 91, 0.25), transparent 60%);
+}
+
+.shadow-card { box-shadow: 0 20px 45px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.04); }
+
+.container-grid {
+  @apply container mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.heading-xl {
+  @apply font-brand tracking-wide text-4xl sm:text-5xl md:text-6xl font-bold;
+}
+
+.heading-lg {
+  @apply font-brand tracking-wide text-3xl sm:text-4xl md:text-5xl font-bold;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-fuelYellow text-codGray font-semibold px-6 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-fuelYellow/60;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-full border border-osloGray/40 text-doubleSpanishWhite px-6 py-3 transition-all duration-300 hover:bg-capeCod/40;
+}
+
+.heading-tech {
+  @apply font-tech tracking-wider text-2xl sm:text-3xl md:text-4xl font-light uppercase;
+}
+
+.text-tech {
+  @apply font-tech tracking-wider uppercase;
+}
+
+.text-brand {
+  @apply font-brand tracking-wide;
+}
+
+.text-body-condensed {
+  @apply font-body-condensed;
+}
+
+.text-body-extended {
+  @apply font-body-extended;
+}
+
+

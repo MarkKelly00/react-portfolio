@@ -1,0 +1,17 @@
+/* Swap these src URLs with your self-hosted woff2 files when available. */
+@font-face {
+  font-family: 'R Spectr';
+  src: url('/fonts/RSpectr-Variable.woff2') format('woff2');
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/ProximaNova-Variable.woff2') format('woff2');
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
