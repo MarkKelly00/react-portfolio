@@ -18,15 +18,19 @@ export default function ContactPage() {
 
   const onSubmit = async (data: FormInputs) => {
     setStatus(null);
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    });
-    if (res.ok) {
-      setStatus('Thanks! We will get back to you shortly.');
-      reset();
-    } else {
+    try {
+      const res = await fetch('https://formspree.io/f/xpwaqrvv', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      if (res.ok) {
+        setStatus('Thanks! We will get back to you shortly.');
+        reset();
+      } else {
+        setStatus('Something went wrong. Please try again.');
+      }
+    } catch (error) {
       setStatus('Something went wrong. Please try again.');
     }
   };
