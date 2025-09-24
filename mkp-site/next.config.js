@@ -5,9 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  // GitHub Pages deployment configuration
-  basePath: '',
-  assetPrefix: '',
+  // GitHub Pages deployment configuration - use relative paths
+  distDir: 'out',
 }
 
 module.exports = nextConfig
