@@ -38,9 +38,12 @@ export default function Hero() {
           transition={{ duration: 0.9, delay: 0.15 }}
           className="md:col-span-5"
         >
-          <div className="aspect-[4/3] rounded-2xl bg-capeCod/40 shadow-card border border-capeCod/40 flex items-center justify-center">
-            <span className="text-osloGray">Hero Visual Placeholder</span>
-          </div>
+          <video autoPlay muted loop playsInline className="aspect-[4/3] rounded-2xl shadow-card border border-capeCod/40 object-cover w-full h-full">
+            <source src="/assets/homepage_clip.mp4" type="video/mp4" />
+            <div className="aspect-[4/3] rounded-2xl bg-capeCod/40 shadow-card border border-capeCod/40 flex items-center justify-center">
+              <span className="text-osloGray">Video not supported</span>
+            </div>
+          </video>
         </motion.div>
       </div>
     </section>
