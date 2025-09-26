@@ -28,7 +28,12 @@ export default function About() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="lg:col-span-6"
         >
-          <div className="aspect-[4/3] rounded-2xl bg-capeCod/30 border border-capeCod/40 shadow-card" />
+          <video autoPlay muted loop playsInline className="aspect-[4/3] rounded-2xl shadow-card border border-capeCod/40 object-cover w-full h-full">
+            <source src="/assets/homepage_clip3.mp4" type="video/mp4" />
+            <div className="aspect-[4/3] rounded-2xl bg-capeCod/30 border border-capeCod/40 shadow-card flex items-center justify-center">
+              <span className="text-osloGray">Video not supported</span>
+            </div>
+          </video>
         </motion.div>
       </div>
     </section>
